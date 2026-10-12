@@ -52,7 +52,7 @@ const FINDER_CONFIG = {
       recordingType: 'sleep',
       label: 'Sleep support',
       browseLabel: 'Browse all sleep recordings',
-      browseUrl: '/sleep', // TODO: set to the real Sleep category page URL
+      browseUrl: 'https://www.drcorrickwoodfin.com/shop?Category=Voice%2520Only', // TODO: set to the real Sleep category page URL
       steps: [
         {
           id: 'focus',
@@ -102,7 +102,7 @@ const FINDER_CONFIG = {
       recordingType: 'bfrb',
       label: 'BFRB support',
       browseLabel: 'Browse all BFRB recordings',
-      browseUrl: '/bfrb', // TODO: set to the real BFRB category page URL
+      browseUrl: 'https://www.drcorrickwoodfin.com/shop?Category=BFRB', // TODO: set to the real BFRB category page URL
       // Launch version: very short. Steps with fewer than 2 available options
       // are skipped automatically, so this works with only two products today
       // and grows as more BFRB recordings / values are added.
