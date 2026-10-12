@@ -547,7 +547,7 @@ function auditRecords(records, cmsOptions = [], config = FINDER_CONFIG) {
 const DEMO_RECORDS = [{"title":"20 Minute Sleep Rescue: Breath and Racing Thoughts","recordingType":"sleep","finderEnabled":true,"isAvailable":true,"isBundle":false,"productSlug":"20-minute-sleep-rescue-breath-and-racing-thoughts","productUrl":"/product-page/20-minute-sleep-rescue-breath-and-racing-thoughts","imageUrl":"","audioSampleUrl":"","price":"12.99","durationMinutes":"20","durationLabel":"","focus":"busy-mind","guidanceType":"focused-20-min","soundCategory":"voice-only","specificSound":"","techniques":"guided-breathing, thought-management","shortDescription":"A focused 20-minute voice-only recording using breath and thought management.","whyThisMatches":"Designed for times when racing thoughts are making it difficult to settle.","priority":"5","sortOrder":"10","bundleTags":""},{"title":"20 Minute Sleep Rescue: Breath and Body Scan","recordingType":"sleep","finderEnabled":true,"isAvailable":true,"isBundle":false,"productSlug":"20-minute-sleep-rescue-breath-and-body-scan","productUrl":"/product-page/20-minute-sleep-rescue-breath-and-body-scan","imageUrl":"","audioSampleUrl":"","price":"12.99","durationMinutes":"20","durationLabel":"","focus":"restless-body","guidanceType":"focused-20-min","soundCategory":"voice-only","specificSound":"","techniques":"guided-breathing, body-scan","shortDescription":"A focused 20-minute voice-only recording using breath and a body scan.","whyThisMatches":"Designed for times when your body feels restless and it is hard to settle.","priority":"5","sortOrder":"20","bundleTags":""},{"title":"Deep and Peaceful Sleep","recordingType":"sleep","finderEnabled":true,"isAvailable":true,"isBundle":false,"productSlug":"deep-and-peaceful-sleep","productUrl":"/product-page/deep-and-peaceful-sleep","imageUrl":"","audioSampleUrl":"","price":"19.99","durationMinutes":"48","durationLabel":"47 min 45 sec","focus":"busy-mind, restless-body, mind-and-body","guidanceType":"longer-practice","soundCategory":"voice-only","specificSound":"","techniques":"guided-breathing, body-awareness, body-scan, thought-management","shortDescription":"A longer voice-only practice combining several techniques for mind and body.","whyThisMatches":"A longer practice that combines guided breathing, a full body scan and gentle thought management.","priority":"8","sortOrder":"30","bundleTags":""},{"title":"10 Sonnet Sleep","recordingType":"sleep","finderEnabled":false,"isAvailable":true,"isBundle":false,"productSlug":"10-sonnet-sleep","productUrl":"/product-page/10-sonnet-sleep","imageUrl":"","audioSampleUrl":"","price":"19.99","durationMinutes":"","durationLabel":"","focus":"","guidanceType":"","soundCategory":"","specificSound":"","techniques":"","shortDescription":"NEEDS ATTRIBUTES - fill in the finder fields, then set finderEnabled to true.","whyThisMatches":"","priority":"3","sortOrder":"40","bundleTags":""},{"title":"Help for Skin Picking","recordingType":"bfrb","finderEnabled":true,"isAvailable":true,"isBundle":false,"productSlug":"help-for-skin-picking","productUrl":"/product-page/help-for-skin-picking","imageUrl":"","audioSampleUrl":"","price":"19.99","durationMinutes":"","durationLabel":"","focus":"skin-picking","guidanceType":"","soundCategory":"voice-only","specificSound":"","techniques":"relaxation","shortDescription":"A self-help recording related to skin picking.","whyThisMatches":"A self-help recording for people who would like support with skin picking.","priority":"5","sortOrder":"10","bundleTags":""},{"title":"Help for Hair Pulling","recordingType":"bfrb","finderEnabled":true,"isAvailable":true,"isBundle":false,"productSlug":"help-for-hair-pulling","productUrl":"/product-page/help-for-hair-pulling","imageUrl":"","audioSampleUrl":"","price":"19.99","durationMinutes":"","durationLabel":"","focus":"hair-pulling","guidanceType":"","soundCategory":"voice-only","specificSound":"","techniques":"relaxation","shortDescription":"A self-help recording related to hair pulling.","whyThisMatches":"A self-help recording for people who would like support with hair pulling.","priority":"5","sortOrder":"20","bundleTags":""}];
 const DEMO_OPTIONS = [{"field":"focus","value":"busy-mind","label":"A busy mind","shortLabel":"Busy mind","description":"For times when thoughts are racing.","sortOrder":"1"},{"field":"focus","value":"restless-body","label":"A restless body","shortLabel":"Restless body","description":"For times when your body finds it hard to settle.","sortOrder":"2"},{"field":"focus","value":"mind-and-body","label":"Both—or I'm not sure","shortLabel":"Mind and body","description":"A combined practice for mind and body.","sortOrder":"3"},{"field":"focus","value":"skin-picking","label":"Skin picking","shortLabel":"Skin picking","description":"","sortOrder":"1"},{"field":"focus","value":"hair-pulling","label":"Hair pulling","shortLabel":"Hair pulling","description":"","sortOrder":"2"},{"field":"guidanceType","value":"focused-20-min","label":"A focused 20-minute recording","shortLabel":"20 minutes","description":"Usually concentrates on one primary area, such as thought management or a body scan.","sortOrder":"1"},{"field":"guidanceType","value":"longer-practice","label":"A longer practice for mind and body","shortLabel":"Longer practice","description":"May combine guided breathing, body awareness, a body scan and thought management.","sortOrder":"2"},{"field":"soundCategory","value":"voice-only","label":"Voice only","shortLabel":"Voice only","description":"","sortOrder":"1"},{"field":"soundCategory","value":"nature","label":"Nature sounds","shortLabel":"Nature sounds","description":"","sortOrder":"2"},{"field":"soundCategory","value":"music","label":"Subtle or meditative music","shortLabel":"Music","description":"","sortOrder":"3"},{"field":"soundCategory","value":"masking-noise","label":"White, grey, or brown noise","shortLabel":"Masking noise","description":"","sortOrder":"4"},{"field":"specificSound","value":"ocean","label":"Ocean","shortLabel":"ocean sounds","description":"","sortOrder":"1"},{"field":"specificSound","value":"waves","label":"Waves","shortLabel":"waves","description":"","sortOrder":"2"},{"field":"specificSound","value":"rain","label":"Rain","shortLabel":"rain","description":"","sortOrder":"3"},{"field":"specificSound","value":"forest","label":"Forest","shortLabel":"forest sounds","description":"","sortOrder":"4"},{"field":"specificSound","value":"birds","label":"Birds","shortLabel":"birdsong","description":"","sortOrder":"5"},{"field":"specificSound","value":"white-noise","label":"White noise","shortLabel":"white noise","description":"","sortOrder":"6"},{"field":"specificSound","value":"grey-noise","label":"Grey noise","shortLabel":"grey noise","description":"","sortOrder":"7"},{"field":"specificSound","value":"brown-noise","label":"Brown noise","shortLabel":"brown noise","description":"","sortOrder":"8"},{"field":"techniques","value":"guided-breathing","label":"Guided breathing","shortLabel":"","description":"","sortOrder":"1"},{"field":"techniques","value":"body-scan","label":"Body scan","shortLabel":"","description":"","sortOrder":"2"},{"field":"techniques","value":"body-awareness","label":"Body awareness","shortLabel":"","description":"","sortOrder":"3"},{"field":"techniques","value":"thought-management","label":"Thought management","shortLabel":"","description":"","sortOrder":"4"},{"field":"techniques","value":"relaxation","label":"Relaxation","shortLabel":"","description":"","sortOrder":"5"}];
 /* ---------------------------------------------------------------------------
- * <product-finder> custom element (UI layer)
+ * <product-finder> custom element (UI layer) - "Aurora" interactive dark design
  *
  * Data in (any ONE of these):
  *   1. attributes data-records / data-options = JSON strings   <- recommended, set from ~10 lines of page code
@@ -557,53 +557,143 @@ const DEMO_OPTIONS = [{"field":"focus","value":"busy-mind","label":"A busy mind"
  *
  * Optional attributes:
  *   browse-sleep-url="/sleep"   browse-bfrb-url="/bfrb"
- * Optional CSS variables on the element: --pf-accent, --pf-accent-text, --pf-bg, --pf-text, --pf-radius
+ * Optional CSS variables on the element:
+ *   --pf-accent, --pf-accent-text, --pf-text, --pf-muted, --pf-sand, --pf-radius, --pf-bg
  * ------------------------------------------------------------------------- */
 
 const esc = (s) =>
   String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+/* Small line icons (24x24, stroke = currentColor). Unknown values fall back to a sparkle. */
+const ICON_PATHS = {
+  sleep: 'M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z',
+  bfrb: 'M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z',
+  'busy-mind': 'M6.5 18a4 4 0 0 1-.4-7.98 5.5 5.5 0 0 1 10.6-1.52A4.5 4.5 0 1 1 17 18zM9 21h.01M13 21h.01',
+  'restless-body': 'M12 6.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM6 10l6 2 6-2M12 12v4.5M12 16.5l-3.5 5M12 16.5l3.5 5',
+  'mind-and-body': 'M9 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM15 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z',
+  'focused-20-min': 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3 2',
+  'longer-practice': 'M6 3h12M6 21h12M8 3v3.5L12 12l-4 5.5V21M16 3v3.5L12 12l4 5.5V21',
+  'voice-only': 'M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zM5 11a7 7 0 0 0 14 0M12 18v3',
+  nature: 'M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l8-8',
+  music: 'M9 18V6l10-2v12M9 18a3 3 0 1 1-3-3 3 3 0 0 1 3 3zM19 16a3 3 0 1 1-3-3 3 3 0 0 1 3 3z',
+  'masking-noise': 'M3 12h2M7 8v8M11 5v14M15 8v8M19 10v4',
+  ocean: 'M2 10c2.5-4 5-4 7.5 0s5 4 7.5 0 3-3 5-2M2 16c2.5-4 5-4 7.5 0s5 4 7.5 0 3-3 5-2',
+  rain: 'M6.5 13a4 4 0 0 1-.4-7.98 5.5 5.5 0 0 1 10.6-1.52A4.5 4.5 0 1 1 17 13zM8 16l-1 3M12 16l-1 3M16 16l-1 3',
+  forest: 'M12 3l6 9h-4l5 7H5l5-7H6zM12 19v3',
+  birds: 'M3 9c3 0 5 2 7 5 1.5-4 4-6 8-6-1 2-2 3-3 4 1.5 3 0 7-5 8-4 .7-8-2-7-11z',
+  'skin-picking': 'M8 13V5.5a1.5 1.5 0 0 1 3 0V11M11 11V3.5a1.5 1.5 0 0 1 3 0V11M14 11V5.5a1.5 1.5 0 0 1 3 0V13c0 4-2 7-6 7-3 0-4-1.5-6-4l-1.5-2a1.5 1.5 0 0 1 2.5-1.5L8 15',
+  'hair-pulling': 'M7 3c4 3-4 6 0 9s-4 6 0 9M14 3c4 3-4 6 0 9s-4 6 0 9',
+  _: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 17l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z',
+};
+ICON_PATHS.waves = ICON_PATHS.ocean;
+ICON_PATHS['white-noise'] = ICON_PATHS['grey-noise'] = ICON_PATHS['brown-noise'] = ICON_PATHS['masking-noise'];
+const icon = (key) =>
+  `<svg class="ic" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${ICON_PATHS[key] || ICON_PATHS._}"/></svg>`;
+
 const CSS = `
-:host{display:block;--a:var(--pf-accent,#2f5d62);--at:var(--pf-accent-text,#fff);--bg:var(--pf-bg,transparent);--tx:var(--pf-text,#1f2a2c);--r:var(--pf-radius,14px);
-  font-family:inherit;color:var(--tx);background:var(--bg);box-sizing:border-box}
+:host{display:block;
+  --a:var(--pf-accent,#5bb8f0);--at:var(--pf-accent-text,#04121b);
+  --tx:var(--pf-text,#eaf0f4);--mu:var(--pf-muted,#a9b8c4);--sand:var(--pf-sand,#f1e6d6);
+  --bd:rgba(255,255,255,.14);--r:var(--pf-radius,20px);
+  font-family:inherit;color:var(--tx);background:var(--pf-bg,transparent);box-sizing:border-box}
 *{box-sizing:border-box}
-.wrap{max-width:960px;margin:0 auto;padding:24px 16px}
-h2,h3{margin:0 0 8px;line-height:1.25;font-weight:600}
-h2{font-size:1.6rem} h3{font-size:1.15rem}
+.wrap{max-width:1040px;margin:0 auto;padding:24px 14px 34px}
+.stage{position:relative;overflow:hidden;isolation:isolate;border:1px solid var(--bd);border-radius:28px;
+  background:linear-gradient(160deg,#0a1a28 0%,#07121c 55%,#081724 100%);padding:clamp(20px,4vw,40px);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none}
+.o1{width:360px;height:360px;background:#2b86c5;top:-120px;right:-80px}
+.o2{width:300px;height:300px;background:#6a5acd;bottom:-140px;left:-60px;opacity:.32}
+.o3{width:220px;height:220px;background:#f1e6d6;top:45%;left:48%;opacity:.07}
+@media (prefers-reduced-motion:no-preference){
+  .o1{animation:d1 16s ease-in-out infinite alternate}.o2{animation:d2 20s ease-in-out infinite alternate}
+  @keyframes d1{to{transform:translate(-70px,60px) scale(1.15)}}@keyframes d2{to{transform:translate(80px,-50px) scale(1.1)}}
+}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;min-height:44px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;letter-spacing:.04em;color:var(--sand);padding:6px 14px 6px 10px;border:1px solid var(--bd);border-radius:999px;background:rgba(255,255,255,.05)}
+.tag .ic{width:18px;height:18px}
+.reset{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--bd);background:rgba(255,255,255,.04);color:var(--tx);font-weight:600;font-size:.9rem;transition:background .2s,border-color .2s}
+.reset:hover{background:rgba(91,184,240,.15);border-color:var(--a)}
+.dots{display:flex;gap:8px;align-items:center;margin:0 0 20px}
+.dot{height:6px;flex:0 0 36px;border-radius:99px;background:rgba(255,255,255,.14);transition:background .4s,flex-basis .4s}
+.dot.done{background:var(--a)}.dot.now{background:linear-gradient(90deg,var(--a),rgba(91,184,240,.25));flex-basis:56px}
+.dot.end{flex-basis:14px}
+h2,h3{margin:0 0 10px;line-height:1.18;font-weight:600;color:#fff;letter-spacing:.005em}
+h2{font-size:clamp(1.55rem,3.6vw,2.3rem)} h3{font-size:1.2rem}
 h2:focus{outline:none}
-p{margin:0 0 12px;line-height:1.5}
-.muted{opacity:.8}
-.grid{display:grid;gap:14px;margin:18px 0}
-.grid.two{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+p{margin:0 0 12px;line-height:1.6}
+.muted{color:var(--mu)}
+.step{display:inline-block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--a);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0;list-style:none}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(91,184,240,.45);background:rgba(91,184,240,.12);color:#fff;font-size:.88rem;font-weight:600}
+button.chip{cursor:pointer;transition:background .2s,transform .2s}
+button.chip:hover{background:rgba(91,184,240,.28);transform:translateY(-1px)}
+button.chip::after{content:"\\270E";opacity:.7;font-size:.85em}
+.chip.fixed{border-style:dashed;color:var(--mu)}
+.grid{display:grid;gap:16px;margin:22px 0}
+.grid.two{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
 button,.btn{font:inherit;cursor:pointer}
-.card-btn{display:block;width:100%;text-align:left;min-height:84px;padding:18px 20px;border:2px solid var(--a);border-radius:var(--r);background:#fff;color:var(--tx)}
-.card-btn:hover{background:#f1f6f6}
-.card-btn:focus-visible,.link-btn:focus-visible,.cta:focus-visible,a:focus-visible,audio:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
-.card-btn .t{display:block;font-weight:600;font-size:1.1rem;margin-bottom:4px}
-.card-btn .d{display:block;opacity:.85;line-height:1.4}
-.card-btn[aria-pressed="true"]{background:var(--a);color:var(--at)}
-.card-btn[aria-pressed="true"] .t::before{content:"\\2713\\00a0"}
-.bar{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;margin-top:20px;padding-top:14px;border-top:1px solid rgba(0,0,0,.12)}
-.link-btn{background:none;border:0;padding:8px 2px;color:var(--a);text-decoration:underline;font-weight:600;min-height:44px}
-.bar a{color:var(--a);font-weight:600;padding:8px 2px;min-height:44px;display:inline-flex;align-items:center}
-.crumbs{font-size:.95rem;margin:0 0 10px;opacity:.85}
-.note{background:#eef4f4;border-left:5px solid var(--a);padding:12px 14px;border-radius:8px;margin:12px 0}
-.step{font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;opacity:.75;margin-bottom:6px}
-.res{border:1px solid rgba(0,0,0,.18);border-radius:var(--r);background:#fff;overflow:hidden;display:flex;flex-direction:column}
-.res.alt{border:2px dashed #7b7b7b;background:#fafafa}
-.res img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#e6eeee}
-.res .in{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
-.badge{align-self:flex-start;font-size:.8rem;font-weight:700;border:1.5px solid currentColor;border-radius:999px;padding:2px 10px}
-.badge.alt{color:#5a4a00;background:#fff3c4}
-.badge.bundle{color:#1b4a2a;background:#dff3e4}
-.facts{margin:0;padding:0;list-style:none;display:grid;gap:2px;font-size:.95rem}
-.facts b{font-weight:600}
-.why{margin-top:6px;font-size:.95rem}
-.price{font-weight:700;font-size:1.1rem}
-.cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:auto;padding:0 20px;border-radius:999px;background:var(--a);color:var(--at);text-decoration:none;font-weight:600}
-audio{width:100%;margin:6px 0}
+.spot{--mx:50%;--my:50%}
+.card-btn{position:relative;overflow:hidden;display:flex;gap:16px;align-items:flex-start;width:100%;text-align:left;min-height:96px;padding:20px 22px;border:1.5px solid var(--bd);border-radius:var(--r);color:var(--tx);
+  background:radial-gradient(260px circle at var(--mx) var(--my),rgba(91,184,240,.2),transparent 65%),rgba(255,255,255,.045);
+  transition:border-color .25s,transform .25s,box-shadow .25s,opacity .3s}
+.card-btn .ic{flex:0 0 auto;width:44px;height:44px;padding:10px;border-radius:14px;background:rgba(91,184,240,.14);color:var(--a);transition:background .25s,color .25s,transform .35s}
+.card-btn .tx{display:block;min-width:0}
+.card-btn .t{display:block;font-weight:600;font-size:1.12rem;margin-bottom:4px;color:#fff}
+.card-btn .d{display:block;color:var(--mu);line-height:1.5;font-size:.96rem}
+.card-btn .n{display:inline-block;margin-top:8px;font-size:.76rem;font-weight:700;letter-spacing:.06em;color:var(--sand);opacity:.85}
+.card-btn:hover{border-color:var(--a);transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.4)}
+.card-btn:hover .ic{background:var(--a);color:var(--at);transform:rotate(-6deg) scale(1.06)}
+.card-btn:active{transform:translateY(0) scale(.99)}
+.card-btn:focus-visible,.link-btn:focus-visible,.cta:focus-visible,a:focus-visible,audio:focus-visible,.reset:focus-visible,.chip:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+.card-btn.picked{background:var(--a);border-color:var(--a);transform:scale(1.02)}
+.card-btn.picked .t,.card-btn.picked .d,.card-btn.picked .n{color:var(--at)}
+.card-btn.picked .ic{background:rgba(4,18,27,.15);color:var(--at)}
+.card-btn.picked .t::before{content:"\\2713\\00a0"}
+.grid.locked .card-btn:not(.picked){opacity:.35;transform:scale(.98)}
+.grid.locked .card-btn{pointer-events:none}
+.bar{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center;margin-top:26px;padding-top:16px;border-top:1px solid var(--bd)}
+.link-btn{background:none;border:0;padding:8px 2px;color:var(--sand);text-decoration:underline;text-underline-offset:4px;font-weight:600;min-height:44px}
+.bar a{color:var(--sand);font-weight:600;padding:8px 2px;min-height:44px;display:inline-flex;align-items:center;text-underline-offset:4px}
+.link-btn:hover,.bar a:hover{color:#fff}
+.note{background:rgba(91,184,240,.1);border:1px solid rgba(91,184,240,.28);border-left:5px solid var(--a);padding:14px 16px;border-radius:14px;margin:14px 0;color:var(--tx)}
+.found{display:inline-flex;align-items:center;gap:8px;margin:0 0 12px;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(91,184,240,.14);border:1px solid rgba(91,184,240,.4);font-size:.88rem;font-weight:700;color:#fff}
+.found .ic{width:18px;height:18px;color:var(--a)}
+.res{position:relative;border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;
+  background:radial-gradient(300px circle at var(--mx) var(--my),rgba(91,184,240,.17),transparent 65%),linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
+  transition:transform .3s,box-shadow .3s,border-color .3s}
+.res::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--a),#8f7bff,var(--sand));opacity:.9}
+.res:hover{transform:translateY(-4px);border-color:rgba(91,184,240,.6);box-shadow:0 20px 44px rgba(0,0,0,.45)}
+.res.alt{border:2px dashed rgba(241,230,214,.5)}.res.alt::before{background:rgba(241,230,214,.45)}
+.res img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#0e1b27;transition:transform .5s}
+.res:hover img{transform:scale(1.04)}
+.imgw{overflow:hidden}
+.res .in{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.res h3{margin:0}
+.badge{align-self:flex-start;font-size:.78rem;font-weight:700;letter-spacing:.04em;border:1.5px solid currentColor;border-radius:999px;padding:3px 12px}
+.badge.alt{color:#ffd98a;background:rgba(255,200,87,.12)}
+.badge.bundle{color:#8fe0a8;background:rgba(80,200,120,.12)}
+.facts{margin:4px 0;padding:0;list-style:none;display:grid;gap:6px;line-height:1.45;font-size:.95rem;color:var(--mu)}
+.facts b{font-weight:600;color:var(--tx)}
+.why{margin-top:4px;font-size:.95rem;color:var(--mu)}
+.why b{color:var(--tx)}
+.price{font-weight:700;font-size:1.3rem;color:var(--sand)}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;margin-top:auto;padding:0 26px;border-radius:999px;background:var(--a);color:var(--at);text-decoration:none;font-weight:700;transition:filter .2s,transform .2s,box-shadow .2s}
+.cta::after{content:"\\2192";transition:transform .2s}
+.cta:hover{filter:brightness(1.1);box-shadow:0 10px 26px rgba(91,184,240,.4)}
+.cta:hover::after{transform:translateX(4px)}
+audio{width:100%;margin:6px 0;color-scheme:dark}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-@media (prefers-reduced-motion:no-preference){.view{animation:f .25s ease}@keyframes f{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}}
+@media (max-width:520px){.wrap{padding:14px 8px 24px}.stage{border-radius:22px}.grid.two{grid-template-columns:1fr}.dot{flex-basis:22px}.dot.now{flex-basis:34px}}
+@media (prefers-reduced-motion:no-preference){
+  .pane{animation:inR .42s cubic-bezier(.2,.8,.2,1)}.pane[data-dir="back"]{animation-name:inL}
+  @keyframes inR{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+  @keyframes inL{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+  .res,.pane .card-btn{animation:rise .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*70ms)}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .dot.now{animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{50%{filter:brightness(1.5)}}
+}
+@media (prefers-reduced-motion:reduce){.card-btn,.res,.cta,.dot,.card-btn .ic{transition:none}.card-btn:hover,.res:hover,.card-btn.picked{transform:none}.o1,.o2{filter:blur(70px)}}
 `;
 
 class ProductFinder extends HTMLElement {
@@ -620,9 +710,27 @@ class ProductFinder extends HTMLElement {
     this._stack = []; // history of states for Back
     this._state = null;
     this._loaded = false;
-    this.shadowRoot.innerHTML = `<style>${CSS}</style><div class="wrap"><div class="sr" role="status" aria-live="polite" id="live"></div><div id="view" class="view"></div></div>`;
+    this._dir = 'fwd';
+    this.shadowRoot.innerHTML = `<style>${CSS}</style><div class="wrap"><div class="stage"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><div class="sr" role="status" aria-live="polite" id="live"></div><div id="view"></div></div></div>`;
     this._view = this.shadowRoot.getElementById('view');
     this._live = this.shadowRoot.getElementById('live');
+    this._reduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // cursor spotlight on cards + arrow-key navigation between answer cards
+    this._view.addEventListener('pointermove', (e) => {
+      const t = e.target.closest && e.target.closest('.spot');
+      if (!t) return;
+      const r = t.getBoundingClientRect();
+      t.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      t.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+    this._view.addEventListener('keydown', (e) => {
+      const keys = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+      if (!(e.key in keys) || !e.target.matches || !e.target.matches('.card-btn')) return;
+      const all = [...this._view.querySelectorAll('.card-btn')];
+      const i = all.indexOf(e.target);
+      const nxt = all[(i + keys[e.key] + all.length) % all.length];
+      if (nxt) { e.preventDefault(); nxt.focus(); }
+    });
   }
 
   /* ---- data inputs ---- */
@@ -677,17 +785,30 @@ class ProductFinder extends HTMLElement {
   }
 
   /* ---- state ---- */
-  _reset(focus = true) { this._stack = []; this._state = null; this._render(focus); }
-  _start(journey) { this._stack.push(this._state); this._state = { journey, answers: {} }; this._render(true); }
+  _reset(focus = true) { this._dir = 'back'; this._stack = []; this._state = null; this._render(focus); }
+  _start(journey) { this._dir = 'fwd'; this._stack.push(this._state); this._state = { journey, answers: {} }; this._render(true); }
   _choose(stepId, value) {
     const next = chooseOption(this._records, this._state, stepId, value, this._cms, this._config);
+    this._dir = 'fwd';
     this._stack.push(this._state);
     this._state = next;
     this._render(true);
   }
   _back() {
     if (!this._stack.length) return;
+    this._dir = 'back';
     this._state = this._stack.pop();
+    this._render(true);
+  }
+  /* Re-open an earlier question: keep the answers given before it, drop the rest. */
+  _jump(stepId) {
+    const j = this._config.journeys[this._state.journey];
+    const idx = j.steps.findIndex((s) => s.id === stepId);
+    const answers = {};
+    j.steps.slice(0, idx).forEach((s) => { if (this._state.answers[s.id]) answers[s.id] = this._state.answers[s.id]; });
+    this._dir = 'back';
+    this._stack.push(this._state);
+    this._state = { journey: this._state.journey, answers };
     this._render(true);
   }
 
@@ -706,7 +827,7 @@ class ProductFinder extends HTMLElement {
       if (next.done) { html = this._resultsHtml(); heading = 'Your results'; }
       else { html = this._questionHtml(next); heading = next.step.question; }
     }
-    this._view.innerHTML = html;
+    this._view.innerHTML = `<div class="pane" data-dir="${this._dir}">${html}</div>`;
     this._wire();
     if (focus) {
       const h = this._view.querySelector('h2');
@@ -727,20 +848,37 @@ class ProductFinder extends HTMLElement {
     const c = this._config.intro;
     return `<h2 tabindex="-1">${esc(c.question)}</h2>
       <div class="grid two">${c.cards
-        .map((x) => `<button class="card-btn" data-journey="${esc(x.journey)}"><span class="t">${esc(x.title)}</span><span class="d">${esc(x.description)}</span></button>`)
+        .map((x, i) => `<button class="card-btn spot" style="--i:${i}" data-journey="${esc(x.journey)}">${icon(x.journey)}<span class="tx"><span class="t">${esc(x.title)}</span><span class="d">${esc(x.description)}</span></span></button>`)
         .join('')}</div>
       <div class="bar">${this._browseLinks()}</div>`;
   }
 
-  _crumbs() {
-    const j = this._config.journeys[this._state.journey];
-    const parts = [j.label];
-    const cms = makeLabeler(this._cms, this._config);
-    j.steps.forEach((s) => {
-      const a = this._state.answers[s.id];
-      if (a) parts.push(cms.get(s.field, a).label);
+  /* header: journey tag + start-again button + progress dots + editable answer chips */
+  _topHtml(total) {
+    const jk = this._state.journey;
+    const j = this._config.journeys[jk];
+    const lab = makeLabeler(this._cms, this._config);
+    const answered = j.steps.filter((s) => this._state.answers[s.id]);
+    const implied = new Set();
+    answered.forEach((s) => {
+      const r = s.rules && s.rules[this._state.answers[s.id]];
+      if (r && r.implies) Object.keys(r.implies).forEach((k) => implied.add(k));
     });
-    return `<p class="crumbs"><span class="sr">Your choices so far: </span>${parts.map(esc).join(' › ')}</p>`;
+    const chips = answered
+      .map((s) => {
+        const label = esc(lab.get(s.field, this._state.answers[s.id]).label);
+        return implied.has(s.id)
+          ? `<li><span class="chip fixed">${label}</span></li>`
+          : `<li><button class="chip" data-jump="${esc(s.id)}" aria-label="Change answer: ${label}">${label}</button></li>`;
+      })
+      .join('');
+    const done = answered.length;
+    const dots = Array.from({ length: done }, () => '<i class="dot done"></i>').join('') +
+      (total === 'results' ? '' : '<i class="dot now"></i>') + '<i class="dot end ' + (total === 'results' ? 'done' : '') + '"></i>';
+    return `<div class="top"><span class="tag">${icon(jk)}${esc(j.label)}</span>
+        <button class="reset" data-act="restart" aria-label="Start again"><span aria-hidden="true">↺</span> Start again</button></div>
+      <div class="dots" aria-hidden="true">${dots}</div>
+      ${chips ? `<ul class="chips" aria-label="Your choices so far">${chips}</ul>` : ''}`;
   }
 
   _controls(journeyKey) {
@@ -753,17 +891,18 @@ class ProductFinder extends HTMLElement {
 
   _questionHtml(next) {
     const n = next.number;
-    return `${this._crumbs()}<div class="step">Question ${n}</div>
+    const sid = next.step.id;
+    return `${this._topHtml()}<div class="step">Question ${n}</div>
       <h2 tabindex="-1">${esc(next.step.question)}</h2>
       ${next.step.help ? `<p class="muted">${esc(next.step.help)}</p>` : ''}
       ${next.notes.map((m) => `<div class="note">${esc(m)}</div>`).join('')}
-      <div class="grid two">${next.step.options
-        .map((o) => `<button class="card-btn" aria-pressed="false" data-step="${esc(next.step.id)}" data-value="${esc(o.value)}"><span class="t">${esc(o.label)}</span>${o.description ? `<span class="d">${esc(o.description)}</span>` : ''}</button>`)
+      <div class="grid two" id="opts">${next.step.options
+        .map((o, i) => `<button class="card-btn spot" style="--i:${i}" aria-pressed="false" data-step="${esc(sid)}" data-value="${esc(o.value)}">${icon(o.value)}<span class="tx"><span class="t">${esc(o.label)}</span>${o.description ? `<span class="d">${esc(o.description)}</span>` : ''}<span class="n">${o.count} recording${o.count === 1 ? '' : 's'}</span></span></button>`)
         .join('')}</div>
       ${this._controls(this._state.journey)}`;
   }
 
-  _cardHtml(c, kind) {
+  _cardHtml(c, kind, i) {
     const facts = [
       c.focus && ['Focus', c.focus],
       c.techniques && ['Guidance', c.techniques],
@@ -773,8 +912,8 @@ class ProductFinder extends HTMLElement {
     const badge =
       kind === 'alt' ? `<span class="badge alt">Close alternative</span>`
       : kind === 'bundle' ? `<span class="badge bundle">Bundle</span>` : '';
-    return `<article class="res ${kind === 'alt' ? 'alt' : ''}">
-      ${c.imageUrl ? `<img src="${esc(c.imageUrl)}" alt="" loading="lazy">` : ''}
+    return `<article class="res spot ${kind === 'alt' ? 'alt' : ''}" style="--i:${i}">
+      ${c.imageUrl ? `<div class="imgw"><img src="${esc(c.imageUrl)}" alt="" loading="lazy"></div>` : ''}
       <div class="in">${badge}
         <h3>${esc(c.title)}</h3>
         ${kind === 'alt' && c.difference ? `<p class="why"><b>How it differs:</b> ${esc(c.difference)}</p>` : ''}
@@ -788,25 +927,33 @@ class ProductFinder extends HTMLElement {
 
   _resultsHtml() {
     const r = getResults(this._records, this._state, this._cms, this._config);
-    const j = this._config.journeys[this._state.journey];
-    return `${this._crumbs()}
-      <h2 tabindex="-1">${r.exact.length ? 'These recordings match your selections' : 'Here is what we would suggest'}</h2>
+    const n = r.exact.length;
+    return `${this._topHtml('results')}
+      ${n ? `<div class="found">${icon('_')}${n} recording${n === 1 ? '' : 's'} match${n === 1 ? 'es' : ''} you</div>` : ''}
+      <h2 tabindex="-1">${n ? 'These recordings match your selections' : 'Here is what we would suggest'}</h2>
       ${r.notes.map((m) => `<div class="note">${esc(m)}</div>`).join('')}
-      ${r.exact.length ? `<div class="grid two">${r.exact.map((c) => this._cardHtml(c, 'exact')).join('')}</div>` : ''}
-      ${r.alternatives.length ? `<h3>You may also wish to consider</h3><p class="muted">These are close, but not an exact match for everything you chose.</p><div class="grid two">${r.alternatives.map((c) => this._cardHtml(c, 'alt')).join('')}</div>` : ''}
-      ${r.bundles.length ? `<h3>Prefer to have several options?</h3><div class="grid two">${r.bundles.map((c) => this._cardHtml(c, 'bundle')).join('')}</div>` : ''}
+      ${n ? `<div class="grid two">${r.exact.map((c, i) => this._cardHtml(c, 'exact', i)).join('')}</div>` : ''}
+      ${r.alternatives.length ? `<h3>You may also wish to consider</h3><p class="muted">These are close, but not an exact match for everything you chose.</p><div class="grid two">${r.alternatives.map((c, i) => this._cardHtml(c, 'alt', i)).join('')}</div>` : ''}
+      ${r.bundles.length ? `<h3>Prefer to have several options?</h3><div class="grid two">${r.bundles.map((c, i) => this._cardHtml(c, 'bundle', i)).join('')}</div>` : ''}
       ${this._controls(this._state.journey)}`;
   }
 
   _wire() {
-    this._view.querySelectorAll('[data-journey]').forEach((b) =>
-      b.addEventListener('click', () => this._start(b.dataset.journey)));
-    this._view.querySelectorAll('[data-step]').forEach((b) =>
-      b.addEventListener('click', () => this._choose(b.dataset.step, b.dataset.value)));
-    this._view.querySelectorAll('[data-act="back"]').forEach((b) =>
-      b.addEventListener('click', () => this._back()));
-    this._view.querySelectorAll('[data-act="restart"]').forEach((b) =>
-      b.addEventListener('click', () => this._reset(true)));
+    const on = (sel, fn) => this._view.querySelectorAll(sel).forEach((b) => b.addEventListener('click', () => fn(b)));
+    on('[data-journey]', (b) => this._start(b.dataset.journey));
+    on('[data-step]', (b) => {
+      // show the pick for a moment (tick + the others fade), then move on
+      const grid = this._view.querySelector('#opts');
+      b.classList.add('picked');
+      b.setAttribute('aria-pressed', 'true');
+      if (grid) grid.classList.add('locked');
+      this._announce(`Selected: ${b.querySelector('.t').textContent}`);
+      const go = () => this._choose(b.dataset.step, b.dataset.value);
+      if (this._reduced) go(); else setTimeout(go, 380);
+    });
+    on('[data-jump]', (b) => this._jump(b.dataset.jump));
+    on('[data-act="back"]', () => this._back());
+    on('[data-act="restart"]', () => this._reset(true));
   }
 }
 
